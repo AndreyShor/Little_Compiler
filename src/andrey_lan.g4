@@ -3,8 +3,8 @@ import MyLexerRules;
 
 prog: stat+;
 
-stat: expr ';' NEWLINE                  # printExpr
-    | VARIABLE '=' expr ';' NEWLINE     # assign
+stat: expr NEWLINE                  # printExpr
+    | VARIABLE '=' expr END NEWLINE     # assign
     | NEWLINE                           # blank
     ;
 
