@@ -12,18 +12,7 @@ expr: expr op=('*' | '/') expr          # mulDiv
     | expr op=('+' | '-') expr          # addSub
     | INTTEGER                          # int
     | VARIABLE                          # var
+    | FLOATING                          # float
     | '(' expr ')'                      # parens
     ;
 
-
-VARIABLE: [a-zA-Z]+;
-INTTEGER: [0-9]+;
-
-NEWLINE: '\r'? '\n';
-WS_SKIP: [ \t]+ -> skip;
-
-END: ';';
-MUL: '*';
-DIV: '/';
-ADD: '+';
-SUB: '-';

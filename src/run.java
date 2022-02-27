@@ -8,7 +8,7 @@ public class run {
     public static void main(String[] args) throws IOException {
 
 
-        CharStream in = CharStreams.fromFileName("./src/test.andrey_lan");
+        CharStream in = CharStreams.fromFileName("./src/test.txt");
 
         andrey_lanLexer lexer = new andrey_lanLexer(in);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -16,6 +16,8 @@ public class run {
 
         ParseTree parseTree = parser.expr();
         System.out.println(parseTree.toStringTree());
+        MyVisitor evaluation = new MyVisitor();
+        evaluation.visit(parseTree);
     }
 
 }
