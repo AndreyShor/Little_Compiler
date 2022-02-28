@@ -415,7 +415,7 @@ public class andrey_lanParser extends Parser {
 		return expr(0);
 	}
 
-	private ExprContext expr(int _p) throws RecognitionException {
+	ExprContext expr(int _p) throws RecognitionException {
 		ParserRuleContext _parentctx = _ctx;
 		int _parentState = getState();
 		ExprContext _localctx = new ExprContext(_ctx, _parentState);

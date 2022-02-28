@@ -15,7 +15,9 @@ public class andrey_lanBaseListener implements andrey_lanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProg(andrey_lanParser.ProgContext ctx) { }
+	@Override public void enterProg(andrey_lanParser.ProgContext ctx) {
+		System.out.println("Rule entered: " + ctx.getText());
+	}
 	/**
 	 * {@inheritDoc}
 	 *
